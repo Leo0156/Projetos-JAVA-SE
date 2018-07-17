@@ -1,0 +1,59 @@
+
+/* Projetado por Leonardo Trindade  
+   Aplicativo JAVA para dividir custos de diarias entre passoas  
+   dia 17/07/2018 
+   JSE
+   hrs 20:30 PM
+*/
+
+package quantoeupago;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class QuantoEuPago {
+
+public static void main(String[] args) {
+    
+        System.out.println("  -----  Aplicativo --------"); 
+        System.out.println("   ----Quanto eu Pago ?----"); 
+        System.out.println(""); 
+      
+        int cont = 0;
+       
+        System.out.print(" Digite a Quantidade de Pessoas : ");
+       
+            Scanner entrada = new Scanner(System.in); 
+            DecimalFormat deci = new DecimalFormat ("0.00");
+            
+            int npessoas = entrada.nextInt(); 
+        
+        System.out.print(" Digite a Quantidade de Dias : ");
+             
+            int ndias = entrada.nextInt(); 
+         
+        System.out.print(" Digite Valor Total Gasto R$");
+              
+            float tgasto = entrada.nextInt(); 
+            float vcabeca = (tgasto / ndias)/npessoas;
+            
+            float dois = (vcabeca*2);
+            float tres = (vcabeca*3);
+            float quatro = (vcabeca*4);
+           
+        System.out.println("");
+        System.out.println("----------------------------"); 
+       
+        System.out.println("Total de " + npessoas + " Pessoas.");
+        System.out.println("Foram " + ndias + " Dias.");
+        System.out.println("Total Gasto R$ " + deci.format (tgasto));
+        System.out.println("Valor Total da Diaria R$" + (deci.format (tgasto / ndias)));
+        System.out.println("Valor da Diaria por Pessoa R$" + (deci.format (vcabeca)));
+        System.out.println("----------------------------"); 
+        System.out.println("Valor 2 dias por pessoa R$" + (deci.format (dois)));
+        System.out.println("Valor 3 dias por pessoa R$" + (deci.format (tres)));
+        System.out.println("Valor 4 dias por pessoa R$" + (deci.format (quatro)));
+        System.out.println("----------------------------");     
+             
+    }
+  }  
