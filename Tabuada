@@ -1,0 +1,28 @@
+
+
+/* Projetado por Leonardo Trindade
+   Aplicativo Tabuada
+   Dia 17/07/2018
+   hrs 20:03 PM
+*/ 
+
+package projetotabuada;
+
+public class ProjetoTabuada {
+    
+    public static void main(String[] args) {
+        
+        System.out.println("       === Tabuada ===");
+        System.out.println(" ");
+        
+        for(int a = 1; a <= 9; a++)
+        
+        {
+            System.out.println("   ===== Tabuada do "+ a + " =====");
+            System.out.println(" ");
+            for (int b = 1; b <=10; b++)
+                System.out.println(a + "x" + b + " = " + a*b);
+                System.out.println(" ");
+      }
+    }
+  }
